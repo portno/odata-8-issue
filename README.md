@@ -29,15 +29,15 @@ System.InvalidOperationException: Reading is already in progress.
 ```
 
 Steps to reproduce:
-Open the solution
+Open the solution with vs2019
 * restore
 * build
 * run
 
 The sample works with in memory database but you can change it to work with SQL too.
 
-Open the js folder
+Open the js folder. The script is written for node 14.15.
 * `npm install`
-* `npm run test`
+* `node test.js`
 
 Notice the output window in Visual Studio. You should see an exception. When you do, some responses will contain invalid json (concatenated results detected by the existence of `}{` sequence).

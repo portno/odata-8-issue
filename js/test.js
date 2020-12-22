@@ -18,5 +18,7 @@ import axios from 'axios';
     } catch {
         //
     }
-    console.log(requests.filter(r => r.response && r.response.indexOf('}{') >= 0).map(r => ({ id: r.id, response: r.response })))
+    
+    console.log(requests.filter(r => r.response && r.response.indexOf('}{') >= 0).map(r => ({ id: r.id, response: r.response })));
+    console.log("successful requests: ", requests.filter(r => r.response).length);
 })();
